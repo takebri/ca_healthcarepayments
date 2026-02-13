@@ -1,0 +1,14 @@
+﻿_id,Field Name,Field Title,Data Type,Description
+1,table,Table number for dashboard,Plain text,This filter helps to identifies data used for creating each dashboard.
+2,county,County Name,Plain text,This field identifies the county associated with the member’s residence.
+3,product,Insurance Product Payer Type on Medical Claim,Plain text,"Product payers are the companies, programs, and organizations that oversee insurance plans and reimburse healthcare providers. The three main types of payers are Commercial, Medi-Cal, and Medicare."
+4,chronic_flag,Chronic Condition Flag,Plain text,This field is used to identify people with and without chronic conditions.
+5,chronic_number_v2,Number of Chronic Conditions,Plain text,This field is used to identify people with one chronic condition or multiple chronic conditions.
+6,chronic_condition,Chronic Condition Types,Plain text,This field is used to identify 23 different chronic condition types.
+7,count,Annual Number of Members,Number,Annual member count for people with medical claims.
+8,med_oop_member,Annual Median Out-of-Pocket Cost,Number,"Annual median out-of-pocket cost. It includes copay, coinsurance, and deductible."
+9,p25_oop_member,Annual 25th Percentile of Out-of-Pocket Cost,Number,The 25th percentile of annual out-of-pocket cost.
+10,p75_oop_member,Annual 75th Percentile of Out-of-Pocket Cost,Number,The 75th percentile of annual out-of-pocket cost.
+11,med_claim_ct,Annual Median Claim Count,Number,Annual median claim count.
+12,p25_claim_ct,Annual 25th Percentile of Claim Count,Number,The 25th percentile of annual claim count.
+13,p75_claim_ct,Annual 75th Percentile of Claim Count,Number,The 75th percentile of annual claim count.
