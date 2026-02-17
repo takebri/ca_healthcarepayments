@@ -66,3 +66,42 @@ SELECT
     SUM(CASE WHEN med_oop_member    IS NULL THEN 1 ELSE 0 END) AS null_med_oop,
     SUM(CASE WHEN med_claim_ct      IS NULL THEN 1 ELSE 0 END) AS null_med_claim_ct
 FROM hpd_oop_chronic;
+
+
+-- SECTION 4: DATA SUPPRESSION & ANOMALY CHECKS
+--      member_count = -1 means data was suppressed
+--      (small populations masked for privacy per HPD rules)
+
+-- 4a. Count suppressed records (member_count = -1); 
+--      22.7% records suppressed
+SELECT 
+    COUNT(*) AS suppressed_rows,
+    ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM hpd_oop_chronic), 1) AS pct_of_total
+FROM hpd_oop_chronic
+WHERE member_count = -1;
+
+-- 4b. Suppressed records by product type
+SELECT 
+    product,
+    COUNT(*) AS suppressed_rows
+FROM hpd_oop_chronic
+WHERE member_count = -1
+GROUP BY product
+ORDER BY suppressed_rows DESC;
+
+-- 4c. Suppressed records by chronic condition
+SELECT 
+    chronic_condition,
+    COUNT(*) AS suppressed_rows
+FROM hpd_oop_chronic
+WHERE member_count = -1
+  AND chronic_condition IS NOT NULL
+GROUP BY chronic_condition
+ORDER BY suppressed_rows DESC;
+
+-- 4d. Check for any other unexpected negative values
+SELECT
+    SUM(CASE WHEN member_count   < 0 THEN 1 ELSE 0 END) AS negative_member_count,
+    SUM(CASE WHEN med_oop_member < 0 THEN 1 ELSE 0 END) AS negative_oop_cost,
+    SUM(CASE WHEN med_claim_ct   < 0 THEN 1 ELSE 0 END) AS negative_claim_count
+FROM hpd_oop_chronic;
