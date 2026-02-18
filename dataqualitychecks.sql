@@ -105,3 +105,34 @@ SELECT
     SUM(CASE WHEN med_oop_member < 0 THEN 1 ELSE 0 END) AS negative_oop_cost,
     SUM(CASE WHEN med_claim_ct   < 0 THEN 1 ELSE 0 END) AS negative_claim_count
 FROM hpd_oop_chronic;
+
+
+-- SECTION 5: Numeric range checks
+
+-- 5a. OOP cost distribution (spots outliers)
+SELECT 
+    MIN(med_oop_member) AS min_oop,
+    MAX(med_oop_member) AS max_oop,
+    AVG(med_oop_member) AS avg_oop,
+    MIN(p25th_oop_member) AS min_p25_oop,
+    MAX(p75th_oop_member) AS max_p75_oop
+FROM hpd_oop_chronic
+    WHERE member_count > 0;
+
+-- 5b. CLAIM count distribution
+SELECT 
+    MIN(med_oop_member) as min_claims,
+    MAX(med_oop_member) as max_claims,
+    AVG(med_oop_member) AS avg_claims,
+    MIN(p25th_claim_member) AS min_p25_claims,
+    MAX(p75th_claim_member) as max_p75_claims
+FROM hpd_oop_chronic
+    WHERE member_count > 0;
+
+
+-- 5c. Check percentile logic: p25 should be <= median <= p75
+SELECT COUNT(*) AS percentile_order_violations
+FROM hpd_oop_chronic
+WHERE 
+    p25th_oop_member  > med_oop_member
+    OR med_oop_member > p75th_oop_member;
