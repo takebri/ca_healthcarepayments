@@ -1,0 +1,24 @@
+CHRONIC_CONDITION,TOTAL_MEMBERS,MEDIAN_OOP_COST,MEDIAN_CLAIMS,OOP_COST_PER_CLAIM,UTILIZATION_CATEGORY,TOTAL_OOP_CATEGORY,COST_PER_CLAIM_CATEGORY
+Hip/Pelvic Fracture,75492,326.27,35.00,9.32200000,High Utilization,Medium Total OOP ,Medium Cost Per Claim
+Atrial Fibrillation,771851,275.00,26.00,10.57692308,High Utilization,Medium Total OOP ,High Cost Per Claim
+Combined Cancer,870369,269.74,24.00,11.23916667,High Utilization,Medium Total OOP ,High Cost Per Claim
+Breast Cancer,339430,255.00,23.00,11.08695652,High Utilization,Medium Total OOP ,High Cost Per Claim
+Ischemic Heart Disease,1196877,240.00,25.00,9.60000000,High Utilization,Medium Total OOP ,Medium Cost Per Claim
+Colorectal Cancer,105761,220.00,25.00,8.80000000,High Utilization,Medium Total OOP ,Medium Cost Per Claim
+Acute Myocardial Infarction,98969,215.72,37.00,5.83027027,High Utilization,Medium Total OOP ,Medium Cost Per Claim
+Stroke,403347,200.00,31.00,6.45161290,High Utilization,Low Total OOP,Medium Cost Per Claim
+Rheumatoid Arthritis,2723099,157.00,23.00,6.82608696,High Utilization,Low Total OOP,Medium Cost Per Claim
+Osteoporosis,861050,140.12,21.00,6.67238095,High Utilization,Low Total OOP,Medium Cost Per Claim
+Heart Failure,799883,120.00,29.00,4.13793103,High Utilization,Low Total OOP,Low Cost Per Claim
+Alzheimers Disease,133988,110.00,23.00,4.78260870,High Utilization,Low Total OOP,Low Cost Per Claim
+Dementia,451740,100.00,25.00,4.00000000,High Utilization,Low Total OOP,Low Cost Per Claim
+Chronic Kidney Disease,1455999,75.00,23.00,3.26086957,High Utilization,Low Total OOP,Low Cost Per Claim
+Hyperlipidemia,5634309,73.05,16.00,4.56562500,Medium Utilization,Low Total OOP,Low Cost Per Claim
+COPD,824325,70.00,25.00,2.80000000,High Utilization,Low Total OOP,Low Cost Per Claim
+Hypertension,5850699,60.00,16.00,3.75000000,Medium Utilization,Low Total OOP,Low Cost Per Claim
+Anemia,1786832,40.00,25.00,1.60000000,High Utilization,Low Total OOP,Low Cost Per Claim
+Anxiety,2951303,30.00,19.00,1.57894737,Medium Utilization,Low Total OOP,Low Cost Per Claim
+Diabetes,2990363,26.00,17.00,1.52941176,Medium Utilization,Low Total OOP,Low Cost Per Claim
+Depression,2976405,20.00,20.00,1.00000000,Medium Utilization,Low Total OOP,Low Cost Per Claim
+Asthma,1547117,15.00,17.00,0.88235294,Medium Utilization,Low Total OOP,Low Cost Per Claim
+Obesity,2830268,0.00,17.00,0.00000000,Medium Utilization,Low Total OOP,Low Cost Per Claim
