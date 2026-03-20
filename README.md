@@ -2,6 +2,8 @@
 
 **Interactive Dashboard:** [View on Tableau Public](https://public.tableau.com/app/profile/brian.takeda/viz/PatientFinancialBurdenAnalysisCaliforniaChronicConditions2022/Findings)
 
+![Dashboard Overview](images/dashboard_overview.png)
+
 ---
 
 ## Project Overview
