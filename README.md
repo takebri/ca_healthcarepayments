@@ -58,12 +58,6 @@ Healthcare costs continue to rise, but the financial burden on patients varies s
 
 Loaded California HPD data into Snowflake and performed quality validation. Conducted three SQL analyses: (1) ranked chronic conditions by median OOP cost, (2) compared costs across Commercial, Medicare, and Medicaid payer types, and (3) examined the relationship between utilization frequency and total patient costs. Results visualized in interactive Tableau dashboard.
 
-### 3. Visualization (Tableau)
-Created interactive dashboard with three complementary views:
-- **Top 10 Conditions:** Color-coded bar chart showing highest-burden conditions
-- **Payer Comparison:** Grouped bar chart revealing insurance-type cost differences
-- **Utilization Analysis:** Scatter plot with reference lines showing cost drivers
-
 ---
 
 ## Tools & Technologies
